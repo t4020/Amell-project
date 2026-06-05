@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-pearl text-piano antialiased selection:bg-piano selection:text-pearl scroll-smooth;
+    }
+}
+
+@layer utilities {
+    .glass-effect {
+        @apply bg-pearl/80 backdrop-blur-md border border-piano/10 shadow-sm;
+    }
+    
+    .btn-piano {
+        background-color: #2563eb; text-pearl px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-piano/80 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50;
+    }
+
+    .btn-outline {
+        @apply border-2 border-piano text-piano px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-piano hover:text-pearl active:scale-95;
+    }
+}
